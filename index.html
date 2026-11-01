@@ -157,7 +157,7 @@ const INFO = {
   address: "Industrial Area 4, Sharjah, United Arab Emirates",
   phones: ["050 759 1048", "055 219 1839"],
   email: "alaynainauto@gmail.com",
-  hours: null,   // e.g. "Sat–Thu 8:00–20:00"
+  hours: "Sat – Thu: 8 am – 1 pm, 4 – 9 pm<br>Friday: Closed",
   rating: 4.7,   // update by hand from the Google listing
   reviews: 87,
   services: [
@@ -176,7 +176,7 @@ const ph = document.getElementById("phone");
 ph.innerHTML = INFO.phones.map(p => `<a href="tel:+971${p.replace(/\s/g,'').slice(1)}">${p}</a>`).join(" &middot; ")
   + `<br><a href="mailto:${INFO.email}">${INFO.email}</a>`;
 const hr = document.getElementById("hours");
-INFO.hours ? hr.textContent = INFO.hours : hr.innerHTML = todo("Opening hours to be added");
+INFO.hours ? hr.innerHTML = INFO.hours : hr.innerHTML = todo("Opening hours to be added");
 document.getElementById("serviceGrid").innerHTML = INFO.services.map(([t,d]) => `<div class="card"><h3>${t}</h3><p>${d}</p></div>`).join("");
 document.getElementById("map").src = `https://maps.google.com/maps?q=${q}&output=embed`;
 document.getElementById("dirBtn").href = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
