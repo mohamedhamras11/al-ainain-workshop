@@ -23,6 +23,9 @@
   nav a:hover{color:var(--text)}
   .btn{display:inline-block;background:var(--accent);color:#111;font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none}
   .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+  .btn{transition:transform .2s,box-shadow .2s,border-color .2s,color .2s}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(245,165,36,.25)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
   .hero{padding:96px 0 80px;background:radial-gradient(900px 400px at 80% -10%,#2a2113,transparent),var(--bg)}
   .hero h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.1;max-width:14ch}
   .hero h1 em{font-style:normal;color:var(--accent)}
@@ -46,7 +49,7 @@
   #lb.open{display:flex}
   #lb img{max-width:100%;max-height:100%;border-radius:8px}
   section{padding:64px 0;border-top:1px solid var(--line)}
-  #why{background:#171b24}
+  #why,#contact{background:#171b24}
   section h2::after{content:"";display:block;width:44px;height:3px;border-radius:2px;background:var(--accent);margin-top:8px}
   h2{font-size:1.7rem;margin-bottom:8px}
   .sub{color:var(--muted);margin-bottom:28px}
@@ -109,6 +112,18 @@
         <div class="card"><h3>Fair pricing</h3><p>No surprise add-ons; you approve the work first.</p></div>
         <div class="card"><h3>Convenient location</h3><p>Based in Sharjah, easy to reach.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <h2>What customers say</h2>
+      <p class="sub">&#9733; 4.7 from 87 Google reviews.</p>
+      <div class="grid">
+        <div class="card"><p>&ldquo;I have visited many auto garages, but this is definitely one of the best I have experienced. The way they deal with customers is excellent, and the quality of their work is equally impressive. Professional, honest, and reliable service from start to finish. Highly recommended!&rdquo;</p><h3 style="margin-top:12px">Majid Mehmood</h3><p style="font-size:.85rem">&#9733;&#9733;&#9733;&#9733;&#9733; Google review</p></div>
+        <div class="card"><p>&ldquo;Great service and very friendly staff! They fixed my car quickly and kept me updated throughout the process. The quality of work is top-notch, and the prices are reasonable. Definitely one of the best garages I&rsquo;ve visited.&rdquo;</p><h3 style="margin-top:12px">Ashik Alseer</h3><p style="font-size:.85rem">&#9733;&#9733;&#9733;&#9733;&#9733; Google review</p></div>
+      </div>
+      <p style="margin-top:20px"><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Al+Aynain+Auto+Maint.+Workshop+Sharjah" target="_blank" rel="noopener">Read all reviews on Google</a></p>
     </div>
   </section>
 
